@@ -14,7 +14,7 @@ def publisher_node():
     float_publisher=rospy.Publisher("float_topic",Float32MultiArray,queue_size=10)
     rate = rospy.Rate(10) # Describing the rate at which message is to be sent in Hz
 
-    # Until stopped This node should continue to exist
+    # Until stopped This node should continue to publish
     while not rospy.is_shutdown():
         arr =range(0,999) # and array in the range between 0 and 999
         # Array of Float data type
