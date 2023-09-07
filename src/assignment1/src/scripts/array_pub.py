@@ -17,14 +17,15 @@ def publisher_node():
     # Until stopped This node should continue to publish
     while not rospy.is_shutdown():
         arr =range(0,999) # and array in the range between 0 and 999
+
         # Array of Float data type
-        float_arr_msgs = Float32MultiArray() # Message to be pulished. Here it is an array of Float datatype with size of 32 bits or 4 bytes
+        float_arr_msgs = Float32MultiArray() # Message to be published. Here it is an array of Float datatype with size of 32 bits or 4 bytes
 
         #random.random() gives value in between 0 and 1
         float_arr_msgs.data.append(random.random()*999) # adding an element to the message array between the range of 0 and 999
         float_arr_msgs.data.append(random.choice(arr)) # adding an element to the message array of integer datatype from the random choice from arr/
         print(float_arr_msgs) # Printing the message to be sent
-        float_publisher.publish(float_arr_msgs) # Publishing the message in form of an array.
+        float_publisher.publish(float_arr_msgs) # Publishing the message in form of an array
         rate.sleep()
 
 if __name__=="__main__":

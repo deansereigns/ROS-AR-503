@@ -1,4 +1,4 @@
-#!usr/bin.python3
+#!usr/bin/python3
 # importing necessary python libraries
 import rospy
 from std_msgs.msg import Float32MultiArray
@@ -10,8 +10,10 @@ def callback(msg):
 
 # Defining Subsciber node
 def subscriber_node():
+
     # Creating a node
     rospy.init_node("subscriber_1",anonymous=True)
+
     # Subscribing to a topic and calling the function callback
     rospy.Subscriber("float_topic",Float32MultiArray,callback)
     rospy.spin()
