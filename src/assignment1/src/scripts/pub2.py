@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 # importing necessary python libraries
 import rospy
 import random

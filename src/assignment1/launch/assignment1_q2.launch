@@ -1,0 +1,14 @@
+<launch>
+    <node
+        name = "float_publisher" pkg="assignment1" type ="pub1.py">
+    </node>
+    <node
+        name = "float_publisher2" pkg="assignment1" type ="pub2.py">
+    </node> 
+    <node
+        name = "subscriber_3" pkg="assignment1" type ="sub3.py">
+    </node>  
+    <node
+        name = "avg_subscriber" pkg="assignment1" type ="avg_sub.py">
+    </node>  
+</launch>

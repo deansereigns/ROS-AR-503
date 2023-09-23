@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 # importing necessary python libraries
 import rospy
 from std_msgs.msg import Float32
