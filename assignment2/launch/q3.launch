@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="assignment2" type="pub1.py" name="publisher1" />
+  <node pkg="assignment2" type="pub2.py" name="publisher2" />
+  <node pkg="assignment2" type="sub1.py" name="avg_publisher" />
+</launch>

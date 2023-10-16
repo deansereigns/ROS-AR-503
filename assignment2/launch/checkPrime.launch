@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="assignment2" type="prime_service.py" name="check_prime_server" />
+  <node pkg="assignment2" type="prime_service_client.py" name="check_prime_client" />
+</launch>

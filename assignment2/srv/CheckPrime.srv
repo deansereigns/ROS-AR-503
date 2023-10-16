@@ -1,0 +1,9 @@
+# Request
+int64 a
+int64 b
+int64 c
+---
+# Response
+bool is_prime_a
+bool is_prime_b
+bool is_prime_c
