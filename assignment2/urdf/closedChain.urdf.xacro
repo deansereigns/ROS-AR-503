@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot name="closed_chain_meachanism">
+  <link name="world"/>
+  <link name="square">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <geometry>
+      <box size="0.03 0.03 0.03"/>
+    </geometry>
+    <material name ="red">
+      <color rgba="1 0 0 0.5"/>
+    </material>
+    </visual>
+  </link>
+  <link name="ab">
+    <visual>
+    <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0"/>
+    <geometry>
+      <cylinder radius="0.025" length="0.2"/>
+    </geometry>
+    <material name ="green">
+      <color rgba="0 1 0 0.5"/>
+    </material>
+    </visual>
+  </link>
+
+  <link name="bo">
+    <visual>
+    <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+    <geometry>
+      <cylinder radius="0.025" length="0.05"/>
+    </geometry>
+    <material name ="blue">
+      <color rgba="0 0 1 0.5"/>
+    </material>
+    </visual>
+  </link>
+  <joint name="virtual_joint" type="prismatic">
+    <parent link="world"/>
+    <child link="square"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <axis xyz="1 0.0 0.0"/>
+    <limit lower="-0.1" upper="0.1" effort="1.0" velocity="0.05"/>
+  </joint>
+  <joint name="joint1" type="revolute">
+    <parent link="square"/>
+    <child link="ab"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0.0 0.0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit lower="0" upper="1.57" effort="1.0" velocity="0.05"/>
+  </joint>
+
+  <!-- <joint name="joint2" type="revolute">
+    <parent link="ab"/>
+    <child link="bo"/>
+    <origin xyz="0.0 0.0 0.125" rpy="0 0.0 0.0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit lower="0" upper="1.57" effort="1.0" velocity="0.05"/>
+  </joint> -->
+  <joint name ="fixed_joint" type="fixed">
+    <parent link="world"/>
+    <child link="bo"/>
+    <origin xyz="0.206155 0.0 0.0" rpy="0.0 0.0 -150"/>
+  </joint>
+</robot>
