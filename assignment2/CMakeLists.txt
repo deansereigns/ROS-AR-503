@@ -19,6 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
   xacro
   sensor_msgs
   cv_bridge
+  turtlesim
 )
 
 ## System dependencies are found with CMake's conventions

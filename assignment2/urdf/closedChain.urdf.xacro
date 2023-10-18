@@ -26,7 +26,7 @@
 
   <link name="bo">
     <visual>
-    <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+    <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 150"/>
     <geometry>
       <cylinder radius="0.025" length="0.05"/>
     </geometry>
